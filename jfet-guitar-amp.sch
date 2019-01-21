@@ -336,8 +336,8 @@ L Device:C_Small C3
 U 1 1 5C0D7BC6
 P 1675 1225
 F 0 "C3" H 1583 1179 50  0000 R CNN
-F 1 "4u7" H 1583 1270 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1675 1225 50  0001 C CNN
+F 1 "10u" H 1583 1270 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 1675 1225 50  0001 C CNN
 F 3 "~" H 1675 1225 50  0001 C CNN
 	1    1675 1225
 	-1   0    0    1   
@@ -363,8 +363,8 @@ L Device:C_Small C2
 U 1 1 5C0E95D8
 P 1850 1225
 F 0 "C2" H 1758 1179 50  0000 R CNN
-F 1 "4u7" H 1758 1270 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1850 1225 50  0001 C CNN
+F 1 "10u" H 1758 1270 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 1850 1225 50  0001 C CNN
 F 3 "~" H 1850 1225 50  0001 C CNN
 	1    1850 1225
 	-1   0    0    1   
@@ -561,17 +561,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" H 7500 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x03_Female J3
-U 1 1 5C1085D3
-P 8975 3025
-F 0 "J3" H 8868 2700 50  0000 C CNN
-F 1 "Conn_3" H 8868 2791 50  0000 C CNN
-F 2 "Footprints:wire_strainrelief_3" H 8975 3025 50  0001 C CNN
-F 3 "~" H 8975 3025 50  0001 C CNN
-	1    8975 3025
-	1    0    0    1   
-$EndComp
-$Comp
 L Amplifier_Operational:NE5532 U1
 U 2 1 5C07D10E
 P 7500 3450
@@ -762,10 +751,6 @@ F 3 "~" H 3175 4000 50  0001 C CNN
 	1    3175 4000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8775 3125 8700 3125
-Wire Wire Line
-	8700 3125 8700 3375
 Wire Wire Line
 	2275 3625 2425 3625
 Wire Wire Line
@@ -1136,4 +1121,19 @@ Text Notes 5700 1750 0    50   ~ 0
 Choice of either op amp or resistor virtual ground
 Wire Wire Line
 	4975 1200 5300 1200
+$Comp
+L Connector:AudioJack4 J3
+U 1 1 5C4D0C6D
+P 8975 3125
+F 0 "J3" H 8645 3008 50  0000 R CNN
+F 1 "AudioJack4" H 8645 3099 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320D_Horizontal" H 8975 3125 50  0001 C CNN
+F 3 "~" H 8975 3125 50  0001 C CNN
+	1    8975 3125
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8775 3225 8700 3225
+Wire Wire Line
+	8700 3225 8700 3375
 $EndSCHEMATC
