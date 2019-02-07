@@ -626,12 +626,6 @@ Wire Wire Line
 Connection ~ 7175 3750
 Wire Wire Line
 	7175 3750 7175 3775
-Wire Wire Line
-	7625 3750 7850 3750
-Wire Wire Line
-	7850 3750 7850 3450
-Wire Wire Line
-	7850 3450 7800 3450
 $Comp
 L power:GND #PWR0102
 U 1 1 5C1A7CB9
@@ -689,12 +683,6 @@ Wire Wire Line
 Connection ~ 7175 2450
 Wire Wire Line
 	7175 2450 7175 2475
-Wire Wire Line
-	7625 2450 7850 2450
-Wire Wire Line
-	7850 2450 7850 2150
-Wire Wire Line
-	7850 2150 7800 2150
 $Comp
 L power:GND #PWR0103
 U 1 1 5C1C5DD7
@@ -716,13 +704,7 @@ Wire Wire Line
 Wire Wire Line
 	8000 2925 8000 2150
 Wire Wire Line
-	8000 2150 7850 2150
-Connection ~ 7850 2150
-Wire Wire Line
 	8100 3025 8000 3025
-Connection ~ 7850 3450
-Wire Wire Line
-	7850 3450 8000 3450
 Wire Wire Line
 	8000 3450 8000 3025
 Wire Wire Line
@@ -756,9 +738,9 @@ Wire Wire Line
 Wire Wire Line
 	2275 4150 2775 4150
 Wire Wire Line
-	8300 2925 8775 2925
+	8300 2925 8375 2925
 Wire Wire Line
-	8300 3025 8775 3025
+	8300 3025 8375 3025
 $Comp
 L Device:R_Small R14
 U 1 1 5C14A092
@@ -1044,7 +1026,7 @@ L Device:C_Small C11
 U 1 1 5C21C79A
 P 7625 950
 F 0 "C11" H 7533 904 50  0000 R CNN
-F 1 "470u" H 7533 995 50  0000 R CNN
+F 1 "NF" H 7533 995 50  0000 R CNN
 F 2 "Capacitor_SMD:C_Elec_8x6.2" H 7625 950 50  0001 C CNN
 F 3 "~" H 7625 950 50  0001 C CNN
 	1    7625 950 
@@ -1055,7 +1037,7 @@ L Device:C_Small C13
 U 1 1 5C21C8DD
 P 7625 1250
 F 0 "C13" H 7533 1204 50  0000 R CNN
-F 1 "470u" H 7533 1295 50  0000 R CNN
+F 1 "NF" H 7533 1295 50  0000 R CNN
 F 2 "Capacitor_SMD:C_Elec_8x6.2" H 7625 1250 50  0001 C CNN
 F 3 "~" H 7625 1250 50  0001 C CNN
 	1    7625 1250
@@ -1136,4 +1118,22 @@ Wire Wire Line
 	8775 3225 8700 3225
 Wire Wire Line
 	8700 3225 8700 3375
+Wire Wire Line
+	7800 3450 8000 3450
+Wire Wire Line
+	8375 3750 8375 3025
+Wire Wire Line
+	7625 3750 8375 3750
+Connection ~ 8375 3025
+Wire Wire Line
+	8375 3025 8775 3025
+Wire Wire Line
+	8375 2925 8375 2450
+Connection ~ 8375 2925
+Wire Wire Line
+	8375 2925 8775 2925
+Wire Wire Line
+	7625 2450 8375 2450
+Wire Wire Line
+	7800 2150 8000 2150
 $EndSCHEMATC
