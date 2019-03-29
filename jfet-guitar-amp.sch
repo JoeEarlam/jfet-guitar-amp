@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:jfet-guitar-amp-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -700,14 +700,6 @@ Wire Wire Line
 	7175 2700 7175 2675
 Connection ~ 6900 3350
 Wire Wire Line
-	8100 2925 8000 2925
-Wire Wire Line
-	8000 2925 8000 2150
-Wire Wire Line
-	8100 3025 8000 3025
-Wire Wire Line
-	8000 3450 8000 3025
-Wire Wire Line
 	6900 2050 7200 2050
 Wire Wire Line
 	6900 3350 7200 3350
@@ -738,29 +730,27 @@ Wire Wire Line
 Wire Wire Line
 	2275 4150 2775 4150
 Wire Wire Line
-	8300 2925 8375 2925
-Wire Wire Line
-	8300 3025 8375 3025
+	8300 3450 8375 3450
 $Comp
 L Device:R_Small R14
 U 1 1 5C14A092
-P 8200 2925
-F 0 "R14" V 8275 2925 50  0000 C CNN
-F 1 "120R" V 8350 2925 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 8200 2925 50  0001 C CNN
-F 3 "~" H 8200 2925 50  0001 C CNN
-	1    8200 2925
+P 8175 2150
+F 0 "R14" V 8250 2150 50  0000 C CNN
+F 1 "120R" V 8325 2150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 8175 2150 50  0001 C CNN
+F 3 "~" H 8175 2150 50  0001 C CNN
+	1    8175 2150
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R_Small R19
 U 1 1 5C14E7AA
-P 8200 3025
-F 0 "R19" V 8275 3025 50  0000 C CNN
-F 1 "120R" V 8350 3025 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 8200 3025 50  0001 C CNN
-F 3 "~" H 8200 3025 50  0001 C CNN
-	1    8200 3025
+P 8200 3450
+F 0 "R19" V 8275 3450 50  0000 C CNN
+F 1 "120R" V 8350 3450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 8200 3450 50  0001 C CNN
+F 3 "~" H 8200 3450 50  0001 C CNN
+	1    8200 3450
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -1103,6 +1093,52 @@ Text Notes 5700 1750 0    50   ~ 0
 Choice of either op amp or resistor virtual ground
 Wire Wire Line
 	4975 1200 5300 1200
+Wire Wire Line
+	8775 3225 8700 3225
+Wire Wire Line
+	8700 3225 8700 3375
+Wire Wire Line
+	8375 3750 8375 3450
+Wire Wire Line
+	7625 3750 8375 3750
+Connection ~ 8375 3450
+Wire Wire Line
+	8375 2925 8375 2450
+Wire Wire Line
+	8375 2925 8775 2925
+Wire Wire Line
+	7625 2450 8375 2450
+$Comp
+L Device:C_Small C17
+U 1 1 5C9EF1CE
+P 4650 1450
+F 0 "C17" H 4558 1404 50  0000 R CNN
+F 1 "100n" H 4558 1495 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4650 1450 50  0001 C CNN
+F 3 "~" H 4650 1450 50  0001 C CNN
+	1    4650 1450
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4975 1200 4650 1200
+Wire Wire Line
+	4650 1200 4650 1350
+Wire Wire Line
+	4650 1550 4650 1700
+Wire Wire Line
+	4650 1700 4975 1700
+Connection ~ 4975 1700
+Wire Wire Line
+	8275 2150 8375 2150
+Wire Wire Line
+	8375 2150 8375 2450
+Connection ~ 8375 2450
+Wire Wire Line
+	7800 2150 8075 2150
+Wire Wire Line
+	7800 3450 8100 3450
+Wire Wire Line
+	8775 3025 8375 3025
 $Comp
 L Connector:AudioJack4 J3
 U 1 1 5C4D0C6D
@@ -1115,25 +1151,5 @@ F 3 "~" H 8975 3125 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	8775 3225 8700 3225
-Wire Wire Line
-	8700 3225 8700 3375
-Wire Wire Line
-	7800 3450 8000 3450
-Wire Wire Line
-	8375 3750 8375 3025
-Wire Wire Line
-	7625 3750 8375 3750
-Connection ~ 8375 3025
-Wire Wire Line
-	8375 3025 8775 3025
-Wire Wire Line
-	8375 2925 8375 2450
-Connection ~ 8375 2925
-Wire Wire Line
-	8375 2925 8775 2925
-Wire Wire Line
-	7625 2450 8375 2450
-Wire Wire Line
-	7800 2150 8000 2150
+	8375 3025 8375 3450
 $EndSCHEMATC
